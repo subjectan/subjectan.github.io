@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" /> 
+<title>情報一覧</title>
+<link type="text/css" rel="stylesheet" href="stylesheets/index.css" />
+
+<style>
+/* tables */
+table.tablesorter {
+    font-family:arial;
+    background-color: #CDCDCD;
+    margin:10px 0pt 15px;
+    width: 100%;
+    text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    padding: 4px 24px 4px 4px;
+}
+table.tablesorter thead tr .header {
+    background-image: url(bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+    cursor: pointer;
+}
+table.tablesorter tbody td {
+    color: #3D3D3D;
+    padding: 4px;
+    background-color: #FFF;
+    vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+    background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+/*
+th {
+  background-color: #fee;
+  border: 1px solid #fff;
+}
+
+td {
+  background-color: #eef;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  
+  padding-left: 8px;
+}
+*/
+</style>
+</head>
+
+<body>
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/public/info/jquery.tablesorter.js"></script>
+<script>
+  $.get("/sub_bot/allinfo/", function(data){
+    $("tbody").html(data);
+    $("#allinfo").tablesorter(); 
+  });
+</script>
+
+<div id="container">
+    <header>
+        <h1>情報一覧</h1>
+    </header>
+
+<table id="allinfo" class="tablesorter">
+  <thead>
+    <tr>
+      <th>display_name</th>
+      <th>screen_name</th>
+      <th>followings</th>
+      <th>followers</th>
+      <th>f/f ratio</th>
+      <th>created_at</th>
+      <th>active_rate</th>
+      <th>friends</th>
+    </tr>
+  </thread>
+  <tbody>
+  </tbody>
+</table>
+
+</div>
+
+</body>
+</html>

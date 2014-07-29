@@ -1,0 +1,28 @@
+body {
+    background-color: #ccf;
+}
+
+a{ color: #006 }
+a:hover{ color: #999; text-decoration: none; }
+
+section h2{
+    margin-top: 100px;
+    font-size: normal;
+}
+
+footer{
+    margin-top: 40px;
+    font-size: small;
+}
+
+div#container{
+    width: 80%;
+}
+
+ul li{
+    margin: 10px;
+}
+
+iframe .graph{
+	border: 10px solid #f90;
+}
