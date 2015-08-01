@@ -1,7 +1,7 @@
 body {
    font-family: Helvetica, arial, sans-serif;
    font-size: 14px;
-   line-height: 190%;
+   line-height: 1.6;
    padding-top: 10px;
    padding-bottom: 10px;
    background-color: white;
@@ -294,3 +294,11 @@ sup {
 	 }
 }
 
+ul li{
+   margin: 10px;
+}
+
+div.list{
+    border-bottom: 3px dashed #f90;
+    margin-bottom: 5px;
+}
